@@ -83,18 +83,43 @@ namespace ERMPowerTest.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("I login to the application using pre-registered login details")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("I register for the application access")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WebTests")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Chrome")]
-        public virtual void ILoginToTheApplicationUsingPre_RegisteredLoginDetails()
+        public virtual void IRegisterForTheApplicationAccess()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I login to the application using pre-registered login details", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I register for the application access", new string[] {
                         "Chrome"});
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5
  testRunner.Given("I use web driver to test web application located at \'https://www.nopcommerce.com/" +
                     "\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 6
+ testRunner.When("I go to registeration page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "FirstName",
+                        "LastName",
+                        "Email",
+                        "Username",
+                        "Country",
+                        "YourRole",
+                        "Password",
+                        "ConfirmPassword"});
+            table1.AddRow(new string[] {
+                        "Abhishek",
+                        "Zunjurwad",
+                        "azunjurwad@gmail.com",
+                        "abhis86",
+                        "Australia",
+                        "Technical / developer",
+                        "Test123#",
+                        "Test123#"});
+#line 7
+ testRunner.And("I provide registeration details for application access", ((string)(null)), table1, "And ");
+#line 10
+ testRunner.Then("I should get successful registration message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
