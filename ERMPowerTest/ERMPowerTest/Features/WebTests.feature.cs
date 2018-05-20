@@ -83,23 +83,18 @@ namespace ERMPowerTest.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Add two numbers")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("I login to the application using pre-registered login details")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "WebTests")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Chrome")]
-        public virtual void AddTwoNumbers()
+        public virtual void ILoginToTheApplicationUsingPre_RegisteredLoginDetails()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I login to the application using pre-registered login details", new string[] {
                         "Chrome"});
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5
- testRunner.Given("I have entered 50 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 6
- testRunner.And("I have entered 70 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 7
- testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 8
- testRunner.Then("the result should be 120 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("I use web driver to test web application located at \'https://www.nopcommerce.com/" +
+                    "\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             this.ScenarioCleanup();
         }
